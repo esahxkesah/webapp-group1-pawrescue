@@ -1,5 +1,3 @@
 # webapp-group1-pawrescue
 PawRescue website 
-
-
-hahahahahaahahahha
+haha
