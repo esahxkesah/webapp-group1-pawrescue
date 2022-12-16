@@ -11,15 +11,15 @@
 
 # PawRescue Website Application
 
-##Introduction
+## Introduction
 
 
-##Objective
+## Objective
 
-##Features & Functionalities
+## Features & Functionalities
 
-##ERD Diagram & Relationship
+## ERD Diagram & Relationship
 
-##Sequence Diagram
+## Sequence Diagram
 
-##References
+## References
