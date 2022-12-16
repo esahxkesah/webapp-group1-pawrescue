@@ -1,5 +1,5 @@
 # Group 1 (PawRescue)
-(![image](https://user-images.githubusercontent.com/68623558/208115712-e28f8a7b-a78d-47c3-85e3-1a35cb3cac90.png)){: width="50%"}
+(![image](https://user-images.githubusercontent.com/68623558/208115712-e28f8a7b-a78d-47c3-85e3-1a35cb3cac90.png))
 
 | Name                                                              |  Matric No    |
 | -------------                                                     | ------------- |
