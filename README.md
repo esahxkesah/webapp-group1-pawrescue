@@ -1,2 +1,2 @@
-# webapp-group1-pawrescue-
+# webapp-group1-pawrescue
 PawRescue website 
