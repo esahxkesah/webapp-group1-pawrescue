@@ -19,6 +19,8 @@
 ## Features & Functionalities
 
 ## ERD Diagram & Relationship
+![Entity Relationship Diagram](https://user-images.githubusercontent.com/83501001/208570244-82235e8c-d2ad-478c-9c89-394e4ae7ad50.png)
+
 
 ## Sequence Diagram
 
