@@ -21,6 +21,13 @@
 ## ERD Diagram & Relationship
 ![Entity Relationship Diagram](https://user-images.githubusercontent.com/83501001/208570244-82235e8c-d2ad-478c-9c89-394e4ae7ad50.png)
 
+In the database system, we have 5 tables which are:
+1. Account
+2. Participation
+3. Event
+4. Adoption
+5. Pet
+
 
 ## Sequence Diagram
 
