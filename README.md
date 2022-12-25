@@ -31,10 +31,10 @@ In the database system, we have 5 tables which are:
 
 ## Sequence Diagram
 # Member Role
-![Sequence diagram - Copy of Sequence diagram](https://user-images.githubusercontent.com/68623558/209470581-eef39ff5-0664-434e-aaa1-cc5eec2c7c5c.png)
+![Sequence diagram - Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470668-4966014a-c821-47fa-a266-4a8131fb9f9a.png)
 
 # Staff Role
-![Sequence diagram - Copy of Copy of Sequence diagram](https://user-images.githubusercontent.com/68623558/209470591-743c17da-1f7f-427e-b27b-2dc369b17228.png)
+![Sequence diagram - Copy of Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470671-96c464c9-0c59-4058-b3d8-8312bb94951a.png)
 
 
 ## References
