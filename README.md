@@ -30,5 +30,11 @@ In the database system, we have 5 tables which are:
 
 
 ## Sequence Diagram
+# Member Role
+![Sequence diagram - Copy of Sequence diagram](https://user-images.githubusercontent.com/68623558/209470581-eef39ff5-0664-434e-aaa1-cc5eec2c7c5c.png)
+
+# Staff Role
+![Sequence diagram - Copy of Copy of Sequence diagram](https://user-images.githubusercontent.com/68623558/209470591-743c17da-1f7f-427e-b27b-2dc369b17228.png)
+
 
 ## References
