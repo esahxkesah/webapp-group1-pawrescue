@@ -22,7 +22,7 @@ There will be 2 users for our website:
 1. Members
 2. Staff
 
-| Members                          |
+| Members                                               |
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.          |
