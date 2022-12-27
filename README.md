@@ -22,16 +22,16 @@ There will be 2 users for our website:
 1. Members
 2. Staff
 
-| Members                                               |
+Members
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
-| Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.          |
-| Homepage                         |          |
-| Adoption                         |          |
-| Events                           |          |
-| Reports                          |          |
+| Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
+| Homepage                         |The first page that visitors see when they load our URL. Members can only view all the information on the homepage, they cannot add or customize any articles, videos and etc.|
+| Adoption                         |Members can only view and fill in the adoption form on this page if they want to adopt a pet.|
+| Events                           |Members can only view and fill in the event form on this page if they want to participate in the event.|
+| Reports                          |Members can only view and fill in the report form on this page if they want to make a report.|
 
-| Staff                            |
+Staff
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |          |
