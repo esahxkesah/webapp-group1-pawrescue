@@ -49,7 +49,7 @@ Staff
 ![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
 
 
-### In the database system, we have 5 tables which are:
+### In the database system, we have 6 tables which are:
 1. Account
 2. Participation
 3. Report
