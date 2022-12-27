@@ -19,14 +19,23 @@
 ## Features & Functionalities
 
 ## ERD Diagram & Relationship
-![Entity Relationship Diagram](https://user-images.githubusercontent.com/83501001/208570244-82235e8c-d2ad-478c-9c89-394e4ae7ad50.png)
+![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
+
 
 In the database system, we have 5 tables which are:
 1. Account
 2. Participation
-3. Event
+3. Report
 4. Adoption
-5. Pet
+5. Event
+6. Pet
+
+The relationship between each entity
+1) Account and Participation : an Account can have zero or many Participations and one Participation must only belong to one Account 
+2) Account and Report : an Account can make zero or many Reports and one Report must only belong to one Account
+3) Account and Adoption : an Account can have zero or many Adoptions and one Adoption must only belong to one Account
+4) Participation and Event : a Participation must only belong to one Event and Event can have zero or many Participations
+5) Adoption and Pet : an Adoption must only have one Pet and a Pet can have zero or only one Adoption
 
 
 ## Sequence Diagram
