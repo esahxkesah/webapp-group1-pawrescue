@@ -17,6 +17,14 @@
 ## Objective
 
 ## Features & Functionalities
+| Members                          |
+| Features                         |  Functionalities   |
+| -------------                    | -------------      |
+| Profile                          |          |
+| Homepage                         |          |
+| Adoption                         |          |
+| Events                           |          |
+| Reports                           |          |
 
 ## ERD Diagram & Relationship
 ![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
