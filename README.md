@@ -17,14 +17,28 @@
 ## Objective
 
 ## Features & Functionalities
+
+There will be 2 users for our website:
+1. Members
+2. Staff
+
 | Members                          |
+| Features                         |  Functionalities   |
+| -------------                    | -------------      |
+| Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.          |
+| Homepage                         |          |
+| Adoption                         |          |
+| Events                           |          |
+| Reports                          |          |
+
+| Staff                            |
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |          |
 | Homepage                         |          |
 | Adoption                         |          |
 | Events                           |          |
-| Reports                           |          |
+| Reports                          |          |
 
 ## ERD Diagram & Relationship
 ![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
