@@ -22,7 +22,7 @@
 ![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
 
 
-In the database system, we have 5 tables which are:
+#In the database system, we have 5 tables which are:
 1. Account
 2. Participation
 3. Report
@@ -30,7 +30,7 @@ In the database system, we have 5 tables which are:
 5. Event
 6. Pet
 
-The relationship between each entity
+#The relationship between each entity
 1) Account and Participation : an Account can have zero or many Participations and one Participation must only belong to one Account 
 2) Account and Report : an Account can make zero or many Reports and one Report must only belong to one Account
 3) Account and Adoption : an Account can have zero or many Adoptions and one Adoption must only belong to one Account
