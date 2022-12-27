@@ -34,11 +34,11 @@ Members
 Staff
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
-| Profile                          |          |
-| Homepage                         |          |
-| Adoption                         |          |
-| Events                           |          |
-| Reports                          |          |
+| Profile                          |Profile section for staff will be created using jetstream, where staff can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
+| Homepage                         |The first page that visitors see when they load our URL. Staff can customize the homepage with variety of articles, videos and etc.|
+| Adoption                         |Staff can customize the adoption page by create, read, update, and delete any data on the adoption list.|
+| Events                           |Staff can customize the event page by create, read, update, and delete any data on the event list.|
+| Reports                          |Staff can customize the report page by create, read, update, and delete any data on the report list.|
 
 ## ERD Diagram & Relationship
 ![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
