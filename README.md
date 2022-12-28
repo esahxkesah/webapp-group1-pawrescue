@@ -38,7 +38,7 @@ There will be 2 users for our website:
 1. Members
 2. Staff
 
-Members
+### Members
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
@@ -47,7 +47,7 @@ Members
 | Events                           |Members can only view and fill in the event form on this page if they want to participate in the event.|
 | Reports                          |Members can only view and fill in the report form on this page if they want to make a report.|
 
-Staff
+### Staff
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |Profile section for staff will be created using jetstream, where staff can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
