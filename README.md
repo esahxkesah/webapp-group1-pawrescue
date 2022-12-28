@@ -74,3 +74,5 @@ Staff
 
 
 ## References
+
+UML sequence diagram tutorial. Lucidchart. (n.d.). Retrieved December 28, 2022, from https://www.lucidchart.com/pages/uml-sequence-diagram 
