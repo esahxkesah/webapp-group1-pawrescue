@@ -86,7 +86,7 @@ Staff
 
 ## References
 
-ol>
+<ol>
   <li>UML sequence diagram tutorial. Lucidchart. (n.d.). Retrieved December 28, 2022, from https://www.lucidchart.com/pages/uml-sequence-diagram </li>
   <li>What is an entity relationship diagram (ERD)? Lucidchart. (n.d.). Retrieved December 28, 2022, from https://www.lucidchart.com/pages/er-diagrams </li>
 </ol>
