@@ -1,66 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Group 1 (PawRescue)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+| Name                                                              |  Matric No    |
+| -------------                                                     | ------------- |
+| SITI AISYAH BINTI ISMAIL                                          |   2010912     |
+| NABILAH HAKIM BINTI NAZRI                                         |   2013672     |
+| NUR SYAFINI BINTI ISMAIL                                          |   2018028     |
+| NUR SARAH NAJIHAH BINTI ZULKAFLI                                  |   2013650     |
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# PawRescue Website Application
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Table of Contents
+<ol>
+  <li>Introduction</li>
+  <li>Objective</li>
+  <li>Features & Functionalities</li>
+  <li>ERD Diagram & Relationship</li>
+  <li>Sequence Diagram</li>
+  <li>References</li>
+</ol>
 
-## Learning Laravel
+## Introduction
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+In our country, Malaysian citizens must at least once see a quite number of cats and dogs roaming around looking so smudged and pitiful on the street when we are outside, especially at the outdoor restaurant, park, neighborhood and so on. They are considered and called stray animals that can include lost animals that were unable to find their way home, street animals that are born and breed on the streets and have never been owned, or abandoned animals that are no longer desired and are left on the streets or brought to a shelter by their owner. Stray animals are not limited to just cats and dogs but it also can be an exotic pet like fennec fox and hedgehog that stray around without observation. Reproduction among stray animals that gets out of hand can raise their number and will cause a lot of complications which increases the likelihood of predation, auto accidents, the spread of zoonotic illnesses, and hence, their potential to serve as disease vectors. 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+One of our proposed approaches is by making an web application to help, save, protect the animals and the environment which is called PawRescue. PawRescue web application will work together with animal shelters to help stray animals to get treated, to get helped and to get protected. This web application also is going to have some user-friendly features and information that everybody can use. We are gonna post and update the upcoming events concerning the stray animals’ welfare aside from adoption and volunteer feature and our rescued pets information. For the adopt feature, users can adopt animals that they find adorable for free by using their registered account which can also be made for free. The event feature will be prepared for those who voluntarily want to take part in our operation officially. Other than that, users can also make a report on any concerning animals that need help that they witness.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Objective
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+The objective of PawRescue web application project is to create a better community which includes the environment and animals through application technology and to gather voluntary society who are in for the better sake of stray animals in our society.
 
-### Premium Partners
+## Features & Functionalities
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+There will be 2 users for our website:
+1. Members
+2. Staff
 
-## Contributing
+### Members
+| Features                         |  Functionalities   |
+| -------------                    | -------------      |
+| Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
+| Homepage                         |The first page that visitors see when they load our URL. Members can only view all the information on the homepage, they cannot add or customize any articles, videos and etc.|
+| Adoption                         |Members can only view and fill in the adoption form on this page if they want to adopt a pet.|
+| Events                           |Members can only view and fill in the event form on this page if they want to participate in the event.|
+| Reports                          |Members can only view and fill in the report form on this page if they want to make a report.|
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Staff
+| Features                         |  Functionalities   |
+| -------------                    | -------------      |
+| Profile                          |Profile section for staff will be created using jetstream, where staff can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
+| Homepage                         |The first page that visitors see when they load our URL.  Staff can customize the homepage by create, read, update, and deleting variety of articles, videos and etc.|
+| Adoption                         |Staff can customize the adoption page by create, read, update, and delete any data on the adoption list.|
+| Events                           |Staff can customize the event page by create, read, update, and delete any data on the event list.|
+| Reports                          |Staff can customize the report page by create, read, update, and delete any data on the report list.|
 
-## Code of Conduct
+## ERD Diagram & Relationship
+![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+### In the database system, we have 6 tables which are:
+1. Account
+2. Participation
+3. Report
+4. Adoption
+5. Event
+6. Pet
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### The relationship between each entity
+1) Account and Participation : an Account can have zero or many Participations and one Participation must only belong to one Account 
+2) Account and Report : an Account can make zero or many Reports and one Report must only belong to one Account
+3) Account and Adoption : an Account can have zero or many Adoptions and one Adoption must only belong to one Account
+4) Participation and Event : a Participation must only belong to one Event and Event can have zero or many Participations
+5) Adoption and Pet : an Adoption must only have one Pet and a Pet can have zero or only one Adoption
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Sequence Diagram
+### Member Role
+![Sequence diagram - Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470668-4966014a-c821-47fa-a266-4a8131fb9f9a.png)
+
+### Staff Role
+![Sequence diagram - Copy of Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470671-96c464c9-0c59-4058-b3d8-8312bb94951a.png)
+
+
+## References
+
+<ol>
+  <li>UML sequence diagram tutorial. Lucidchart. (n.d.). Retrieved December 28, 2022, from https://www.lucidchart.com/pages/uml-sequence-diagram </li>
+  <li>What is an entity relationship diagram (ERD)? Lucidchart. (n.d.). Retrieved December 28, 2022, from https://www.lucidchart.com/pages/er-diagrams </li>
+</ol>
+
+
