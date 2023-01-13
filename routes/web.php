@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('mainpage');
 });
+
+Route::get('/event', function () {
+ //   return view('event');
+});
+
+
+Route::get('/add-event', function () {
+    return view('add-event');
+});
+
+//route after clicking submit button
+Route::resource('addevent', EventController::class);
 
 Route::middleware([
     'auth:sanctum',
