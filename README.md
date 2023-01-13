@@ -51,7 +51,6 @@ There will be 2 users for our website:
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |Profile section for staff will be created using jetstream, where staff can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
-| Homepage                         |The first page that visitors see when they load our URL.  Staff can customize the homepage by create, read, update, and deleting variety of articles, videos and etc.|
 | Adoption                         |Staff can customize the adoption page by create, read, update, and delete any data on the adoption list.|
 | Events                           |Staff can customize the event page by create, read, update, and delete any data on the event list.|
 | Reports                          |Staff can customize the report page by create, read, update, and delete any data on the report list.|
