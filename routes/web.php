@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProgrammeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('mainpage');
 });
+
+Route::get('/event', function () {
+    return view('event');
+});
+
+Route::get('/add-programme', function () {
+    return view('add-programme');
+});
+
+//route after clicking submit button
+Route::resource('addprogramme', ProgrammeController::class);
+
 
 Route::middleware([
     'auth:sanctum',
