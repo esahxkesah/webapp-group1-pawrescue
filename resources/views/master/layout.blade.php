@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
-    <link href="images/about-1.jpg" rel="icon">
+    <title>PawRescue</title>
+    <link href="images/pawrescue-logo.png" rel="icon">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,7 +50,8 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	    	<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>Pet sitting</a>
+            <a class="navbar-brand" href="images/pawrescue-logo.png" rel="icon" >PawRescue</a>
+	    	{{-- <a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>PawRescue</a> --}}
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -69,15 +70,17 @@
                     @endauth
                 </div>
             @endif
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="vet.html" class="nav-link">Veterinarian</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+	        	<li class="nav-item"><a href="{{ url('/adopt') }}" class="nav-link">Adopt</a></li>
+	        	<li class="nav-item"><a href="{{ url('/report') }}" class="nav-link">Report</a></li>
+	        	<li class="nav-item"><a href="{{ url('/event') }}"class="nav-link">Event</a></li>
+	        	<li class="nav-item"><a href="{{ url('/profile') }}" class="nav-link">Profile</a></li>
+                <li class="nav-item dropdown">
+
+	          {{-- <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
 	          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="/event" class="nav-link scrollto" >Event</a></li>
+              <li class="nav-item"><a href="/event" class="nav-link scrollto" >Event</a></li> --}}
 	        </ul>
 	      </div>
 	    </div>
@@ -90,7 +93,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-						<h2 class="footer-heading">Petsitting</h2>
+						<h2 class="footer-heading">PawRescue</h2>
 						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 						<ul class="ftco-footer-social p-0">
               <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>

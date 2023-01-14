@@ -1,6 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
+            <img src="{{ url('pawrescue-logo.png') }}" />
             <x-jet-authentication-card-logo />
         </x-slot>
 

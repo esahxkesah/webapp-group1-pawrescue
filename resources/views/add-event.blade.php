@@ -37,7 +37,7 @@
 
 <div>
 
-<form action="addprogramme" method="post" enctype="multipart/form-data">
+<form action="addevent" method="post" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">

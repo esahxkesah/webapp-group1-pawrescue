@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProgrammeController;
+use App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,12 +21,12 @@ Route::get('/event', function () {
     return view('event');
 });
 
-Route::get('/add-programme', function () {
-    return view('add-programme');
+Route::get('/add-event', function () {
+    return view('add-event');
 });
 
 //route after clicking submit button
-Route::resource('addprogramme', ProgrammeController::class);
+Route::resource('addevent', EventController::class);
 
 
 Route::middleware([

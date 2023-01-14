@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Programme;
+use App\Models\Event;
 use Illuminate\Support\Facades\DB;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 
-class ProgrammeController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class ProgrammeController extends Controller
      */
     public function index()
     {
-        $programmes = DB::table('programme');
+        $events = DB::table('event');
 
-        return view('programme', ['event'=>$programmes]);
+        return view('event', ['event'=>$events]);
     }
 
     /**
@@ -39,12 +39,12 @@ class ProgrammeController extends Controller
      */
     public function store(Request $request)
     {
-        $programme = new Programme();
-        $programme->id = IdGenerator::generate(['table' => 'programmes', 'length' => 6, 'prefix' =>'EVE']);
-        $programme->event_name=$request->eventName;
-        $programme->event_date=$request->eventDate;
-        $programme->event_time=$request->eventTime;
-        $programme->details=$request->eventDetail;
+        $event = new Event();
+        $event->id = IdGenerator::generate(['table' => 'events', 'length' => 6, 'prefix' =>'EVE']);
+        $event->event_name=$request->eventName;
+        $event->event_date=$request->eventDate;
+        $event->event_time=$request->eventTime;
+        $event->details=$request->eventDetail;
         // ensure the request has a file before we attempt anything else.
         if ($request->hasFile('file')) {
 
@@ -56,12 +56,12 @@ class ProgrammeController extends Controller
             $request->file->store('product', 'public');
 
             // Store the record, using the new file hashname which will be it's new filename identity.
-            $programme->file_path=$request->file->hashName();
+            $event->file_path=$request->file->hashName();
 
-            $programme->save(); // Finally, save the record.
+            $event->save(); // Finally, save the record.
         }
 
-        return redirect('add-programme');
+        return redirect('add-event');
     }
 
     /**

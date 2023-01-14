@@ -10,7 +10,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-11 ftco-animate text-center">
-          	<h1 class="mb-4">Highest Quality Care For Pets You'll Love </h1>
+          	<h1 class="mb-4">Caring For the Animals. </h1>
             <p><a href="#" class="btn btn-primary mr-md-4 py-3 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
           </div>
         </div>
@@ -21,14 +21,14 @@
     	<div class="container">
     		<div class="row">
           <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
-            <div class="d-block services active text-center">
+            <div class="d-block services text-center">
               <div class="icon d-flex align-items-center justify-content-center">
             		<span class="flaticon-blind"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Dog Walking</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right.</p>
-                <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+                <h3 class="heading">Adoption</h3>
+                <p>By adopting from a shelter, you are providing an animal with the second chance they deserve. Many have been rescued from horrific circumstances such as cruelty, neglect and abandonment, or quite simply their owners were no longer able to look after them due to illness or a change in situation.</p>
+                <a href="{{ url('/adopt') }}" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
               </div>
             </div>
           </div>
@@ -38,9 +38,9 @@
             		<span class="flaticon-dog-eating"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Pet Daycare</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right.</p>
-                <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+                <h3 class="heading">Report</h3>
+                <p>Sadly, we see so many cases of animal abuse and cruelty today. But we can take action, report animal cruelty and give justice back towards the voiceless animals</p>
+                <a href="{{ url('/report') }}"  class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
               </div>
             </div>
           </div>
@@ -50,9 +50,9 @@
             		<span class="flaticon-grooming"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Pet Grooming</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right.</p>
-                <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+                <h3 class="heading">Events</h3>
+                <p>Join our cause on upcoming events concerning the stray animals’ welfare</p>
+                <a href="{{ url('/event') }}" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
               </div>
             </div>
           </div>
