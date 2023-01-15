@@ -71,6 +71,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('my_custom_symlink_1') => storage_path('app/public/eventpic'), //link to eventpic on storage folder
+        public_path('my_custom_symlink_2') => storage_path('app/public/petpic'), //link to petpic on storage folder
     ],
 
 ];

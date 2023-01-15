@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\PetController;
 use App\Http\Controllers\Controller;
 
 /*
@@ -19,17 +20,32 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
-Route::get('/event', function () {
- //   return view('event');
-});
+//route to page of all events
+Route::get('/event', [EventController::class, 'index']);
 
+// //route for individual events
+Route::get('/event/{id}', [EventController::class, 'getDetails'])-> name('event.details');
 
+//route to page of all pets for adoption
+Route::get('/adopt', [PetController::class, 'index']);
+
+//route for individual pets
+Route::get('/adopt/{id}', [PetController::class, 'getDetails'])-> name('pet.details');
+
+//route to add event (ONLY FOR ADMINS)
 Route::get('/add-event', function () {
     return view('add-event');
 });
 
-//route after clicking submit button
+//route to add pet for adoption (ONLY FOR ADMINS)
+Route::get('/add-pet', function () {
+    return view('add-pet');
+});
+
+//route after clicking submit button to store the inputs
 Route::resource('addevent', EventController::class);
+Route::resource('addpet', PetController::class);
+
 
 Route::middleware([
     'auth:sanctum',

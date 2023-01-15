@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Event;
+use App\Models\Pet;
 use Illuminate\Support\Facades\DB;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 
-class EventController extends Controller
+use Illuminate\Http\Request;
+
+class PetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +17,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = DB::table('events')
+        $pets = DB::table('pets')
         ->orderBy('id', 'asc')
         ->get();
 
-        return view('event', ['events'=>$events]);
+        return view('adopt', ['pets'=>$pets]);
     }
 
     /**
@@ -41,13 +42,12 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
-        $event = new Event();
-        $event->id=IdGenerator::generate(['table' => 'events', 'length' => 6, 'prefix' =>'EVE']);
-        $event->event_name=$request->eventName;
-        $event->event_date=$request->eventDate;
-        $event->event_time=$request->eventTime;
-        $event->details=$request->eventDetail;
+        $pet = new Pet();
+        $pet->id = IdGenerator::generate(['table' => 'pets', 'length' => 6, 'prefix' =>'PET']);
+        $pet->pet_name=$request->petName;
+        $pet->pet_type=$request->petType;
+        $pet->pet_age=$request->petAge;
+        $pet->pet_sex=$request->petSex;
 
         // ensure the request has a file before we attempt anything else.
         if ($request->hasFile('file')) {
@@ -56,16 +56,16 @@ class EventController extends Controller
                 'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
             ]);
 
-            // Save the file locally in the storage/public/ folder under a new folder named /images
-            $request->file->store('eventpic', 'public');
+            // Save the file locally in the storage/public/ folder under a new folder named /product
+            $request->file->store('petpic', 'public');
 
             // Store the record, using the new file hashname which will be it's new filename identity.
-            $event->file_path=$request->file->hashName();
+            $pet->file_path=$request->file->hashName();
         }
 
-        $event->save(); // Finally, save the record.
+        $pet->save(); // Finally, save the record.
 
-        return redirect('add-event');
+        return redirect('add-pet');
     }
 
     /**
@@ -116,9 +116,9 @@ class EventController extends Controller
     public function getDetails($id)
     {
 
-        $eventDetails= Event::find($id);
+        $petDetails= Pet::find($id);
 
-        return view('event-info', ['eventDetails'=>$eventDetails]);
+        return view('pet-info', ['petDetails'=>$petDetails]);
 
     }
 }

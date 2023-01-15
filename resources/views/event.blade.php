@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
+
   <body>
 
     {{-- header --}}
@@ -40,13 +42,36 @@
       </div>
     </section>
 
-    {{-- content section --}}
-    <section class="ftco-section">
-			<div class="container">
-				<div class="row">
+    {{-- Content --}}
 
-        {{-- event 1 --}}
-          <div class="col-md-4 ftco-animate">
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                @foreach($events as $event)
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch">
+                                <img src="{{asset('my_custom_symlink_1/'. $event->file_path)}}"/>
+                                <li><a href="{{route('event.details', $event->id)}}"></li>
+                            </div>
+                        </div>
+                        <div class="text pt-3 px-3 pb-4 text-center">
+                            <h3>{{$event->event_name}}</h3>
+                            <div class="faded">
+                                <p>{{$event->event_date}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+
+        {{-- <div class="col-md-4 ftco-animate">
             <div class="work mb-4 img d-flex align-items-end" style="background-image: url(images/gallery-1.jpg);">
             	<a href="images/gallery-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
 	    					<span class="fa fa-expand"></span>
@@ -58,6 +83,9 @@
 	              </div>
               </div>
             </div>
+
+
+
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="work mb-4 img d-flex align-items-end" style="background-image: url(images/gallery-2.jpg);">
@@ -182,7 +210,9 @@
           </div>
         </div>
 			</div>
-		</section>
+
+    <section>--}}
+
   </body>
 </html>
 
