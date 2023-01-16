@@ -32,18 +32,9 @@
 					<div class="col-md-6 d-flex align-items-center">
 						<p class="mb-0 phone pl-md-2">
 							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> pawrescue@gmail.com</a>
 						</p>
 					</div>
-					<div class="col-md-6 d-flex justify-content-md-end">
-						<div class="social-media">
-			    		<p class="mb-0 d-flex">
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-			    		</p>
-		        </div>
 					</div>
 				</div>
 			</div>
@@ -69,7 +60,7 @@
                     @endauth
                 </div>
             @endif
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item active"><a href="homepage" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item"><a href="adopt" class="nav-link">Adopt</a></li>
 	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
@@ -89,7 +80,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-						<h2 class="footer-heading">Petsitting</h2>
+						<h2 class="footer-heading">PawRescue</h2>
 						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 						<ul class="ftco-footer-social p-0">
               <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
@@ -125,21 +116,19 @@
 					<div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
 						<h2 class="footer-heading">Quick Links</h2>
 						<ul class="list-unstyled">
-              <li><a href="#" class="py-2 d-block">Home</a></li>
-              <li><a href="#" class="py-2 d-block">About</a></li>
-              <li><a href="#" class="py-2 d-block">Services</a></li>
-              <li><a href="#" class="py-2 d-block">Works</a></li>
-              <li><a href="#" class="py-2 d-block">Blog</a></li>
-              <li><a href="#" class="py-2 d-block">Contact</a></li>
-            </ul>
+                            <li><a href="homepage" class="py-2 d-block">Home</a></li>
+                            <li><a href="adopt" class="py-2 d-block">Adopt</a></li>
+                            <li><a href="#" class="py-2 d-block">Report</a></li>
+                            <li><a href="event" class="py-2 d-block">Event</a></li>
+                        </ul>
 					</div>
 					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
 						<h2 class="footer-heading">Have a Questions?</h2>
 						<div class="block-23 mb-3">
               <ul>
-                <li><span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                <li><span class="icon fa fa-map"></span><span class="text">Level 15, KL Eco City, Kuala Lumpur, Malaysia</span></li>
                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">pawrescue@gmail.com</span></a></li>
               </ul>
             </div>
 					</div>

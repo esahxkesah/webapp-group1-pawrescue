@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
+Route::get('/homepage', function () {
+    return view('mainpage');
+});
+
 //route to page of all events
 Route::get('/event', [EventController::class, 'index']);
 

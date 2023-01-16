@@ -52,7 +52,7 @@
                     <div class="staff">
                         <div class="img-wrap d-flex align-items-stretch">
                             <div class="img align-self-stretch">
-                                <img src="{{asset('my_custom_symlink_2/'. $pet->file_path)}}"/>
+                                <img src="{{asset('my_custom_symlink_2/'. $pet->file_path)}}" style='height: 100%; width: 100%; object-fit: contain'/>
                                 <li><a href="{{route('pet.details', $pet->id)}}"></li>
                             </div>
                         </div>

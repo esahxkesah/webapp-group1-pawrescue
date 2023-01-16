@@ -29,13 +29,36 @@
 
 
   <body>
-    <section>
-        <h1>
-            {{$eventDetails->event_name}}
-            <br>
-            {{$eventDetails->details}}
-        </h1>
-    </section>
+    <div class = "container2" >
+        <div class = "single-event" style='margin-top: 80px; margin-bottom: 60px;height: 100%'>
+            <div class ="row">
+                <div class="col-6">
+                    <div class="event-image">
+                        <div class="event-image-main">
+                            <img src="{{asset('my_custom_symlink_1/'. $eventDetails->file_path)}}" style='margin-left: 200px; width: 450px'>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-6">
+                    <div class="event">
+                        <div class="event-title">
+                            <h2>{{$eventDetails->event_name}}</h2>
+                        </div>
+                        <div class="event-date">
+                            <h3>{{$eventDetails->event_date}}</h3>
+                            <h3>{{$eventDetails->event_time}}</h3>
+                        </div>
+                        <div class="event-description">
+                            <h4>Event Description: </h4>
+                            <p>{{$eventDetails->details}}</p>
+                        </div>
+                        <div class="event-btn-group">
+                            <button type="submit">Participate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
   </body>
 
 </html>
