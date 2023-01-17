@@ -45,11 +45,10 @@
                             <h2>{{$eventDetails->event_name}}</h2>
                         </div>
                         <div class="event-date">
-                            <h3>{{$eventDetails->event_date}}</h3>
-                            <h3>{{$eventDetails->event_time}}</h3>
+                            <h3 style="font-size: 16px">Date: {{$eventDetails->event_date}}</h3>
+                            <h3 style="font-size: 16px">Time: {{$eventDetails->event_time}} hours</h3>
                         </div>
                         <div class="event-description">
-                            <h4>Event Description: </h4>
                             <p>{{$eventDetails->details}}</p>
                         </div>
                         <div class="event-btn-group">
