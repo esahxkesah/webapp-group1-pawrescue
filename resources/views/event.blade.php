@@ -4,7 +4,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
     <title>PawRescue</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,9 +27,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
 
-    {{-- header --}}
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/event.jpeg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -38,6 +38,34 @@
           </div>
         </div>
       </div>
+    </section>
+
+    {{-- Content --}}
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                @foreach($events as $event)
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch">
+                                <img src="{{asset('my_custom_symlink_1/'. $event->file_path)}}" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <li><a href="{{route('event.details', $event->id)}}"></li>
+                            </div>
+                        </div>
+                        <div class="text pt-3 px-3 pb-4 text-center">
+                            <h3>{{$event->event_name}}</h3>
+                            <div class="faded">
+                                <p>Date: {{$event->event_date}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </section>
 
     <section class="ftco-section">
@@ -182,6 +210,7 @@
         </div>
 			</div>
 		</section>
+
   </body>
 </html>
 
