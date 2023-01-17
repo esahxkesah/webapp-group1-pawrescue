@@ -37,8 +37,8 @@ Route::get('/adopt', [PetController::class, 'index']);
 Route::get('/adopt/{id}', [PetController::class, 'getDetails'])-> name('pet.details');
 
 //route to add event (ONLY FOR ADMINS)
-Route::get('/event', function () {
-    return view('event');
+Route::get('/add-event', function () {
+    return view('add-event');
 });
 
 //route to add pet for adoption (ONLY FOR ADMINS)
@@ -49,7 +49,7 @@ Route::get('/add-pet', function () {
 //route after clicking submit button to store the inputs
 Route::resource('addevent', EventController::class);
 Route::resource('addpet', PetController::class);
-=======
+
 //route after clicking submit button
 Route::resource('addevent', EventController::class);
 
