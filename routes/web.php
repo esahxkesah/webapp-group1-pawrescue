@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,21 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        return view('mainpage');
+    })->name('mainpage');
+
+    Route::group(['middleware' => ['authenticate', 'roles']], function (){
+        Route::get('/mainpage', 'DashboardController@dashboard')->name('dashboard');
+    });
 });
+
+
+
+Route::get('logout', function ()
+{
+    auth()->logout();
+    Session()->flush();
+
+    return Redirect::to('/');
+})->name('logout');
+

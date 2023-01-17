@@ -1,7 +1,6 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="{{ url('pawrescue-logo.png') }}" />
             <x-jet-authentication-card-logo />
         </x-slot>
 
@@ -13,6 +12,12 @@
             </div>
         @endif
 
+
+
+        <div class="block mt-4">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                {{ __('New User?') }}
+            </a>
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -32,6 +37,7 @@
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
+
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))

@@ -31,8 +31,8 @@
 				<div class="row">
 					<div class="col-md-6 d-flex align-items-center">
 						<p class="mb-0 phone pl-md-2">
-							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +60 123456789</a>
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> pawrescue@email.com</a>
 						</p>
 					</div>
 					<div class="col-md-6 d-flex justify-content-md-end">
@@ -61,20 +61,32 @@
                 <div
                     @auth
                     class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a></li>
+                 <!-- Authentication -->
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   @click.prevent="$root.submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-responsive-nav-link>
+                </form>
                     @else
                     <li class="nav-item"><a href="{{ route('login') }}"class="nav-link">Log in</a></li>
                     <ul class="navbar-nav">
-                        @if (Route::has('register'))
+
+                        {{-- @if (Route::has('register'))
                         <li class="nav-item"><a href="{{ route('register') }}"class="nav-link">Register</a></li>
-                        @endif
+                        @endif --}}
                     @endauth
                 </div>
             @endif
 	        	<li class="nav-item"><a href="{{ url('/adopt') }}" class="nav-link">Adopt</a></li>
 	        	<li class="nav-item"><a href="{{ url('/report') }}" class="nav-link">Report</a></li>
 	        	<li class="nav-item"><a href="{{ url('/event') }}"class="nav-link">Event</a></li>
-	        	<li class="nav-item"><a href="{{ url('/profile') }}" class="nav-link">Profile</a></li>
+	        	<li class="nav-item"><a href="{{  route('profile.show') }}" :active="request()->routeIs('profile.show')" class="nav-link">Profile</a></li>
                 <li class="nav-item dropdown">
+
+
 
 	          {{-- <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
 	          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>

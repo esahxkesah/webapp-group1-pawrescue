@@ -569,21 +569,19 @@
     	<div class="container">
     		<div class="row d-md-flex justify-content-end">
     			<div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate">
-    				<h2 class="mb-4">Free Consultation</h2>
-    				<form action="#" class="appointment">
+    				<h2 class="mb-4">Contact US</h2>
+    				<form action="" method=POST class="contact">
     					<div class="row">
     						<div class="col-md-12">
 									<div class="form-group">
 			    					<div class="form-field">
 	          					<div class="select-wrap">
-	                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
+	                      <div class="icon"><span></span></div>
 	                      <select name="" id="" class="form-control">
-	                      	<option value="">Select services</option>
-	                        <option value="">Cat Sitting</option>
-	                        <option value="">Dog Walk</option>
-	                        <option value="">Pet Spa</option>
-	                        <option value="">Pet Grooming</option>
-	                        <option value="">Pet Daycare</option>
+	                      	<option value="">General Inquiry</option>
+	                        <option value="">Sponsorship</option>
+	                        <option value="">Service</option>
+
 	                      </select>
 	                    </div>
 			              </div>
@@ -593,29 +591,8 @@
 									<div class="form-group">
 			              <input type="text" class="form-control" placeholder="Your Name">
 			            </div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Vehicle number">
-			            </div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-			    					<div class="input-wrap">
-			            		<div class="icon"><span class="fa fa-calendar"></span></div>
-			            		<input type="text" class="form-control appointment_date" placeholder="Date">
-		            		</div>
-			    				</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-			    					<div class="input-wrap">
-			            		<div class="icon"><span class="fa fa-clock-o"></span></div>
-			            		<input type="text" class="form-control appointment_time" placeholder="Time">
-		            		</div>
-			    				</div>
-								</div>
-								<div class="col-md-12">
+
+								<div class="col-md-20">
 									<div class="form-group">
 			              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 			            </div>
