@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
-    <link href="/images/about-1.jpg" rel="icon">
+    <title>PawRescue</title>
+    <link href="images/pawrescue-logo.png" rel="icon">
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,6 +32,7 @@
 				<div class="row">
 					<div class="col-md-6 d-flex align-items-center">
 						<p class="mb-0 phone pl-md-2">
+            
 							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
 							<a href="#"><span class="fa fa-paper-plane mr-1"></span> pawrescue@gmail.com</a>
 						</p>
@@ -41,7 +43,8 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	    	<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>Pet sitting</a>
+            <a class="navbar-brand" href="images/pawrescue-logo.png" rel="icon" >PawRescue</a>
+	    	{{-- <a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>PawRescue</a> --}}
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -51,19 +54,32 @@
                 <div
                     @auth
                     class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a></li>
+                 <!-- Authentication -->
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   @click.prevent="$root.submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-responsive-nav-link>
+                </form>
                     @else
                     <li class="nav-item"><a href="{{ route('login') }}"class="nav-link">Log in</a></li>
                     <ul class="navbar-nav">
-                        @if (Route::has('register'))
+
+                        {{-- @if (Route::has('register'))
                         <li class="nav-item"><a href="{{ route('register') }}"class="nav-link">Register</a></li>
-                        @endif
+                        @endif --}}
                     @endauth
                 </div>
             @endif
+
 	        	<li class="nav-item active"><a href="homepage" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="adopt" class="nav-link">Adopt</a></li>
-                <li class="nav-item"><a href="report" class="nav-link">Report</a></li>
+	          <li class="nav-item"><a href="adopt" class="nav-link">Adopt</a></li>
+          	<li class="nav-item"><a href="report" class="nav-link">Report</a></li>
 	          <li class="nav-item"><a href="event" class="nav-link">Event</a></li>
+	        	<li class="nav-item"><a href="{{  route('profile.show') }}" :active="request()->routeIs('profile.show')" class="nav-link">Profile</a></li>
+                <li class="nav-item dropdown">
 	        </ul>
 	      </div>
 	    </div>

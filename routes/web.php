@@ -37,8 +37,8 @@ Route::get('/adopt', [PetController::class, 'index']);
 Route::get('/adopt/{id}', [PetController::class, 'getDetails'])-> name('pet.details');
 
 //route to add event (ONLY FOR ADMINS)
-Route::get('/add-event', function () {
-    return view('add-event');
+Route::get('/event', function () {
+    return view('event');
 });
 
 //route to add pet for adoption (ONLY FOR ADMINS)
@@ -49,7 +49,9 @@ Route::get('/add-pet', function () {
 //route after clicking submit button to store the inputs
 Route::resource('addevent', EventController::class);
 Route::resource('addpet', PetController::class);
-
+=======
+//route after clicking submit button
+Route::resource('addevent', EventController::class);
 
 Route::middleware([
     'auth:sanctum',
@@ -57,6 +59,19 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        return view('mainpage');
+    })->name('mainpage');
+
+    Route::group(['middleware' => ['authenticate', 'roles']], function (){
+        Route::get('/mainpage', 'DashboardController@dashboard')->name('dashboard');
+    });
 });
+
+Route::get('logout', function ()
+{
+    auth()->logout();
+    Session()->flush();
+
+    return Redirect::to('/');
+})->name('logout');
+
