@@ -27,14 +27,33 @@
   </head>
 
   <body>
-    <section>
-        <h1>
-            {{$petDetails->pet_name}}
-            <br>
-            {{$petDetails->pet_type}}
-        </h1>
-    </section>
-
+    <div class = "container2" >
+        <div class = "single-pet" style='margin-top: 80px; margin-bottom: 60px;height: 100%'>
+            <div class ="row">
+                <div class="col-6">
+                    <div class="pet-image">
+                        <div class="pet-image-main">
+                            <img src="{{asset('my_custom_symlink_2/'. $petDetails->file_path)}}" style='margin-left: 200px; width: 450px'>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-6">
+                    <div class="pet">
+                        <div class="pet-title">
+                            <h2>{{$petDetails->pet_name}}</h2>
+                        </div>
+                        <div class="pet-date">
+                            <h3>{{$petDetails->pet_type}}</h3>
+                            <h3>{{$petDetails->pet_age}}</h3>
+                            <h3>{{$petDetails->pet_sex}}</h3>
+                        </div>
+                        <div class="event-btn-group">
+                            <button type="submit">Adoption</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
   </body>
 </html>
 
