@@ -41,7 +41,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
         $event = new Event();
         $event->id=IdGenerator::generate(['table' => 'events', 'length' => 6, 'prefix' =>'EVE']);
         $event->event_name=$request->eventName;
