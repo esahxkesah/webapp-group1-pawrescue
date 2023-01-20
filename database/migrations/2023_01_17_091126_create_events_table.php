@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('id', 6);
             $table->string('event_name', 30);
             $table->date('event_date'); //date format in form
-            $table->time('event_time', $precision = 4);
+            $table->time('event_time', $precision = 0);
             $table->string('details', 500);
             $table->string('file_path');
             $table->timestamps();
