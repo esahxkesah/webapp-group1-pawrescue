@@ -34,29 +34,40 @@ The objective of PawRescue web application project is to create a better communi
 
 ## Features & Functionalities
 
-There will be 2 users for our website:
-1. Members
-2. Staff
+There will be 3 type of users for our website:
+1. Guest or public user
+2. Registered User
+3. Staff
 
-### Members
+###Guest
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
-| Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
-| Homepage                         |The first page that visitors see when they load our URL. Members can only view all the information on the homepage, they cannot add or customize any articles, videos and etc.|
-| Adoption                         |Members can only view and choose a pet to adopt on this page.|
-| Events                           |Members can only view and choose a event to participate on this page.|
-| Reports                          |Members can only view and fill in the report form on this page if they want to make a report.|
+| Homepage                         |The first page that visitors see when they load our URL. Guest can only view all the information on the homepage.|
+| Adoption                         |Guest can only view the list of open adoptions and the details of every pet.|
+| Events                           |Guest can only view the list of available events and details of every event.|
+| Donate                           |Guest can fill up the form to donate on this page.|
+
+### Registered User
+| Features                         |  Functionalities   |
+| -------------                    | -------------      |
+| Profile                          |Profile section for registered user will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
+| Homepage                         |The first page that visitors see when they load our URL. Registered users can only view all the information on the homepage.|
+| Adoption                         |Registered user can only view the list of open adoptions and the details and choose a pet to adopt on this page.|
+| Events                           |Registered user can only view the list of available events and the details and choose an event to participate on this page.|
+| Reports                          |Registered user can only view and fill in the report form on this page if they want to make a report.|
+| Donate                           |Registered user can fill up the form to donate on this page.|
 
 ### Staff
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Profile                          |Profile section for staff will be created using jetstream, where staff can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
-| Adoption                         |Staff can customize the adoption page by create, read, update, and delete any data on the adoption list.|
-| Events                           |Staff can customize the event page by create, read, update, and delete any data on the event list.|
-| Reports                          |Staff can customize the report page by read, update, and delete any data on the report list.|
+| Adoption                         |Staff can customize the adoption page by creating new adoption and insert new adoption on the adopt page.|
+| Events                           |Staff can customize the event page by creating new event and insert new even on the adopt page.|
+| Reports                          |Staff can view all reports submitted by the registered users.|
 
 ## ERD Diagram & Relationship
-![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
+![Entity Relationship Diagram](https://user-images.githubusercontent.com/68623558/214100575-d0bbd180-4d87-4455-b0a6-6c5a73cd9140.png)
+
 
 
 ### In the database system, we have 6 tables which are:
@@ -66,6 +77,7 @@ There will be 2 users for our website:
 4. Adoption
 5. Event
 6. Pet
+7. Donate (no relationships with other tables)
 
 ### The relationship between each entity
 1) Account and Participation : an Account can have zero or many Participations and one Participation must only belong to one Account 
@@ -85,9 +97,12 @@ There will be 2 users for our website:
 ## Project System Captured
 
 ## Challenges & Difficutlties 
-1) Figuring out out how to use GitHub so that the work can be compiled.
-2) Separating the page for staff and members.
-3) To choose a time when every member is available for a meeting.
+### 1) Figuring out out how to use GitHub so that the work can be compiled.
+Github is a new platform for us to use as a student. We had never done a collaboration for a coding project especially for web application thus the challenges of using github rised. Setting up at first for each of the member in the group was hard. There are several ways to collaborate but one of the key step is to clone the github project. 
+###2) Separating the page for staff and members.
+We were only taught about Jetsream about its setup and installation. Therefore, configuring the Jetstream usage onto the laravel project was tough. There are more things to discover about the usage of Jestream for the authentication purpose.
+###3) To choose a time when every member is available for a meeting.
+Since we are a full time student, there are other subjects than web application to handle and focus on.Hence, we hardly could set a time for all of us to code together most of the times. Lack of teamwork, made the project unmotivated and less coordination. 
 
 ## References
 
