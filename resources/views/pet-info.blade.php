@@ -49,7 +49,7 @@
                             <h3>{{$petDetails->pet_sex}}</h3>
                         </div>
                         <div class="event-btn-group">
-                            {{-- <button type="submit">Adoption</button> --}}
+
                             <button class="button-class" type="submit" onclick="myFunction()" id="new-adopt">Adoption</button>
                         </div>
                     </div>

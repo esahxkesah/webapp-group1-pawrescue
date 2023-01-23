@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pet;
+use Illuminate\Http\Request;
+use App\Models\Donate;
 use Illuminate\Support\Facades\DB;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 
-use Illuminate\Http\Request;
 
-class PetController extends Controller
+class DonateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +17,11 @@ class PetController extends Controller
      */
     public function index()
     {
-        $pets = DB::table('pets')
-        ->orderBy('pet_type', 'asc')
+        $donates = DB::table('donates')
+        ->orderBy('id', 'asc')
         ->get();
 
-        return view('adopt', ['pets'=>$pets]);
+        return view('donate', ['donates'=>$donates]);
     }
 
     /**
@@ -42,31 +42,28 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
-        $pet = new Pet();
-        $pet->id = IdGenerator::generate(['table' => 'pets', 'length' => 6, 'prefix' =>'PET']);
-        $pet->pet_name=$request->petName;
-        $pet->pet_type=$request->petType;
-        $pet->pet_breed=$request->petBreed;
-        $pet->pet_age=$request->petAge;
-        $pet->pet_sex=$request->petSex;
+        $donate = new Donate();
+        $donate->id = IdGenerator::generate(['table' => 'donates', 'length' => 6, 'prefix' =>'DON']);
+        $donate->name = $request->name;
+        $donate->email = $request->email;
+        $donate->amount = $request->amount;
+        $donate->notes = $request->notes;
 
-        // ensure the request has a file before we attempt anything else.
         if ($request->hasFile('file')) {
 
             $request->validate([
-                'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+                'image' => 'mimes:pdf' // Only allow .jpg, .bmp and .png file types.
             ]);
 
-            // Save the file locally in the storage/public/ folder under a new folder named /product
-            $request->file->store('petpic', 'public');
+            // Save the file locally in the storage/public/ folder under a new folder named /images
+            $request->file->store('receipt', 'public');
 
             // Store the record, using the new file hashname which will be it's new filename identity.
-            $pet->file_path=$request->file->hashName();
+            $donate->file_path=$request->file->hashName();
         }
+        $donate->save();
 
-        $pet->save(); // Finally, save the record.
-
-        return redirect('add-pet');
+        return redirect('donate');
     }
 
     /**
@@ -112,14 +109,5 @@ class PetController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function getDetails($id)
-    {
-
-        $petDetails= Pet::find($id);
-
-        return view('pet-info', ['petDetails'=>$petDetails]);
-
     }
 }

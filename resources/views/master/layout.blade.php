@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>PawRescue</title>
-    <link href="images/pawrescue-logo.png" rel="icon">
+    <link href="images/logo.jpg" rel="icon">
 
 
     <meta charset="utf-8">
@@ -43,7 +43,8 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-            <a class="navbar-brand" href="images/pawrescue-logo.png" rel="icon" >PawRescue</a>
+            <img src="/images/Logo.jpg" style="width:80px; margin-left:20px; margin-top:10px">
+            <a class="navbar-brand" href="home" rel="icon" >PawRescue</a>
 	    	{{-- <a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>PawRescue</a> --}}
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
@@ -54,6 +55,7 @@
 	            <li class="nav-item"><a href="adopt" class="nav-link">Adopt</a></li>
           	    <li class="nav-item"><a href="add-report" class="nav-link">Report</a></li>
 	            <li class="nav-item"><a href="event" class="nav-link">Event</a></li>
+                <li class="nav-item"><a href="donate" class="nav-link">Donate</a></li>
 	        	<li class="nav-item"><a href="{{  route('profile.show') }}" :active="request()->routeIs('profile.show')" class="nav-link">Profile</a></li>
             @if (Route::has('login'))
 
@@ -124,7 +126,7 @@
 					<div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
 						<h2 class="footer-heading">Quick Links</h2>
 						<ul class="list-unstyled">
-                            <li><a href="mainpage" class="py-2 d-block">Home</a></li>
+                            <li><a href="home" class="py-2 d-block">Home</a></li>
                             <li><a href="adopt" class="py-2 d-block">Adopt</a></li>
                             <li><a href="add-report" class="py-2 d-block">Report</a></li>
                             <li><a href="event" class="py-2 d-block">Event</a></li>
