@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::drop('event');
+        Schema::create('participations', function (Blueprint $table) {
+            $table->string('id', 6);
+            $table->string('event_id', 6);
+            $table->string('username')->unique();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('participations');
     }
 };

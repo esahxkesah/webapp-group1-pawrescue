@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PetController;
+use App\Http\Controllers\ParticipateController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +23,7 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
-Route::get('/homepage', function () {
+Route::get('/mainpage', function () {
     return view('mainpage');
 });
 
@@ -28,7 +31,7 @@ Route::get('/homepage', function () {
 Route::get('/event', [EventController::class, 'index']);
 
 // //route for individual events
-Route::get('/event/{id}', [EventController::class, 'getDetails'])-> name('event.details');
+Route::get('/event/{id?}', [EventController::class, 'getDetails'])-> name('event.details');
 
 //route to page of all pets for adoption
 Route::get('/adopt', [PetController::class, 'index']);
@@ -37,8 +40,8 @@ Route::get('/adopt', [PetController::class, 'index']);
 Route::get('/adopt/{id}', [PetController::class, 'getDetails'])-> name('pet.details');
 
 //route to add event (ONLY FOR ADMINS)
-Route::get('/event', function () {
-    return view('event');
+Route::get('/add-event', function () {
+    return view('add-event');
 });
 
 //route to add pet for adoption (ONLY FOR ADMINS)
@@ -49,21 +52,32 @@ Route::get('/add-pet', function () {
 //route after clicking submit button to store the inputs
 Route::resource('addevent', EventController::class);
 Route::resource('addpet', PetController::class);
-=======
+
+// //route to participate controller
+// Route::resource('/participate/{username}', ParticipateController::class)-> name('participate.action');
+
 //route after clicking submit button
 Route::resource('addevent', EventController::class);
+
+//add report open to every members
+Route::get('/add-report',function(){
+    return view('add-report');
+});
+
+Route::resource('report', ReportController::class);
+
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/mainpage', function () {
         return view('mainpage');
     })->name('mainpage');
 
     Route::group(['middleware' => ['authenticate', 'roles']], function (){
-        Route::get('/mainpage', 'DashboardController@dashboard')->name('dashboard');
+        Route::get('/profile', 'DashboardController@dashboard')->name('dashboard');
     });
 });
 

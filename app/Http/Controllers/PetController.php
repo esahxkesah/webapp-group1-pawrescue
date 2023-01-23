@@ -46,6 +46,7 @@ class PetController extends Controller
         $pet->id = IdGenerator::generate(['table' => 'pets', 'length' => 6, 'prefix' =>'PET']);
         $pet->pet_name=$request->petName;
         $pet->pet_type=$request->petType;
+        $pet->pet_breed=$request->petBreed;
         $pet->pet_age=$request->petAge;
         $pet->pet_sex=$request->petSex;
 
