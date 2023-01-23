@@ -80,8 +80,6 @@
 	          <li class="nav-item"><a href="event" class="nav-link">Event</a></li>
 	        	<li class="nav-item"><a href="{{  route('profile.show') }}" :active="request()->routeIs('profile.show')" class="nav-link">Profile</a></li>
                 <li class="nav-item dropdown">
-
-
 	        </ul>
 	      </div>
 	    </div>

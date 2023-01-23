@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('event', function (Blueprint $table) {
-            $table->string('event_id', 6);
+        Schema::create('events', function (Blueprint $table) {
+            $table->string('id', 6);
             $table->string('event_name', 30);
             $table->date('event_date'); //date format in form
-            $table->time('event_time', $precision = 4);
+            $table->time('event_time', $precision = 0);
             $table->string('details', 500);
             $table->string('file_path');
             $table->timestamps();
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event');
+        Schema::dropIfExists('events');
     }
 };
