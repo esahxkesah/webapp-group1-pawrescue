@@ -85,9 +85,9 @@ There will be 2 users for our website:
 ## Project System Captured
 
 ## Challenges & Difficutlties 
-1) Trying to figure out out how to use github so that the work can be compiled.
+1) Figuring out out how to use GitHub so that the work can be compiled.
 2) Separating the page for staff and members.
-3) 
+3) To choose a time when every member is available for a meeting.
 
 ## References
 
