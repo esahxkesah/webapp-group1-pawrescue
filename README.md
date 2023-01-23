@@ -39,7 +39,7 @@ There will be 3 type of users for our website:
 2. Registered User
 3. Staff
 
-###Guest
+### Guest
 | Features                         |  Functionalities   |
 | -------------                    | -------------      |
 | Homepage                         |The first page that visitors see when they load our URL. Guest can only view all the information on the homepage.|
@@ -99,9 +99,9 @@ There will be 3 type of users for our website:
 ## Challenges & Difficutlties 
 ### 1) Figuring out out how to use GitHub so that the work can be compiled.
 Github is a new platform for us to use as a student. We had never done a collaboration for a coding project especially for web application thus the challenges of using github rised. Setting up at first for each of the member in the group was hard. There are several ways to collaborate but one of the key step is to clone the github project. 
-###2) Separating the page for staff and members.
+### 2) Separating the page for staff and members.
 We were only taught about Jetsream about its setup and installation. Therefore, configuring the Jetstream usage onto the laravel project was tough. There are more things to discover about the usage of Jestream for the authentication purpose.
-###3) To choose a time when every member is available for a meeting.
+### 3) To choose a time when every member is available for a meeting.
 Since we are a full time student, there are other subjects than web application to handle and focus on.Hence, we hardly could set a time for all of us to code together most of the times. Lack of teamwork, made the project unmotivated and less coordination. 
 
 ## References
