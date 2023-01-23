@@ -1,11 +1,13 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ParticipateController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DonateController;
 
 
 /*
@@ -23,7 +25,7 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
-Route::get('/mainpage', function () {
+Route::get('/home', function () {
     return view('mainpage');
 });
 
@@ -66,6 +68,8 @@ Route::get('/add-report',function(){
 
 Route::resource('report', ReportController::class);
 
+// Donation Form
+Route::resource( 'donate',  DonateController::class);
 
 Route::middleware([
     'auth:sanctum',

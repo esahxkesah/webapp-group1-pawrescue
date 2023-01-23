@@ -1,4 +1,4 @@
-@extends('master.layout')
+@extends('master.adminlayout')
 @section('content')
 
 <!DOCTYPE html>

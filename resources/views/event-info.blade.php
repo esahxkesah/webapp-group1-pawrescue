@@ -146,7 +146,7 @@
                     <p>{{$eventDetails->details}}</p>
                 </div>
                 <div class="event-btn-group">
-                    {{-- <button class="button-class" href="{{route('participate.action', Auth::User()->username)}}" type="submit">Participate</button> --}}
+                    <button class="button-class" onclick="myFunction()" type="submit" id="participate-event">Participate</button>
                 </div>
             </div>
         </div>
@@ -154,5 +154,16 @@
   </body>
 
 </html>
+
+<script>
+    var form = document.getElementById('participate-event');
+
+    function myFunction()
+    {
+        if(form.checkValidity()){
+            alert("You have participated the event!")
+        }
+    }
+</script>
 
 @endsection
