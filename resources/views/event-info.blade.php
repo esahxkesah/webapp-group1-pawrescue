@@ -76,6 +76,25 @@
             line-height: 24px;
         }
 
+        .button-class{
+            background: #00bd56;
+            border: 1px solid #00bd56;
+            color: #fff;
+            width: 130px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .button-class:hover {
+            border: 1px solid #00bd56;
+            background: transparent;
+            color: #00bd56;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         @media(max-width: 940px){
             .container2{
                 flex-direction: column;
@@ -127,7 +146,7 @@
                     <p>{{$eventDetails->details}}</p>
                 </div>
                 <div class="event-btn-group">
-                    <button type="submit">Participate</button>
+                    {{-- <button class="button-class" href="{{route('participate.action', Auth::User()->username)}}" type="submit">Participate</button> --}}
                 </div>
             </div>
         </div>

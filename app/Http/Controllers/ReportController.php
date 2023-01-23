@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Models\Event;
+use App\Models\Report;
 use Illuminate\Support\Facades\DB;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 
-class EventController extends Controller
+
+class ReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +16,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = DB::table('events')
-        ->orderBy('event_name', 'asc')
+        $reports = DB::table('reports')
+        ->orderBy('id', 'asc')
         ->get();
 
-        return view('event', ['events'=>$events]);
+        return view('report_list', ['reports'=>$reports]);
     }
 
     /**
@@ -41,30 +41,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $event = new Event();
-        $event->id=IdGenerator::generate(['table' => 'events', 'length' => 6, 'prefix' =>'EVE']);
-        $event->event_name=$request->eventName;
-        $event->event_date=$request->eventDate;
-        $event->event_time=$request->eventTime;
-        $event->details=$request->eventDetail;
-
-        // ensure the request has a file before we attempt anything else.
-        if ($request->hasFile('file')) {
-
-            $request->validate([
-                'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
-            ]);
-
-            // Save the file locally in the storage/public/ folder under a new folder named /images
-            $request->file->store('eventpic', 'public');
-
-            // Store the record, using the new file hashname which will be it's new filename identity.
-            $event->file_path=$request->file->hashName();
-        }
-
-        $event->save(); // Finally, save the record.
-
-        return redirect('add-event');
+        $report = new Report();
+        $report->id = IdGenerator::generate(['table' => 'reports', 'length' => 6, 'prefix' =>'REP']);
+        $report->username = request('username');
+        $report->report_title = request('report_title');
+        $report->report_details = request('report_details');
+        $report->save();
+        return redirect('add-report');
     }
 
     /**
@@ -110,14 +93,5 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function getDetails($id)
-    {
-
-        $eventDetails= Event::find($id);
-
-        return view('event-info', ['eventDetails'=>$eventDetails]);
-
     }
 }

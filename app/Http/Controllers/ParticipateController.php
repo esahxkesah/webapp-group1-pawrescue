@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\User;
+use App\Models\Participation;
 use Illuminate\Support\Facades\DB;
-use Haruncpi\LaravelIdGenerator\IdGenerator;
 
-class EventController extends Controller
+class ParticipateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +17,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = DB::table('events')
-        ->orderBy('event_name', 'asc')
-        ->get();
-
-        return view('event', ['events'=>$events]);
+        //
     }
 
     /**
@@ -41,30 +38,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $event = new Event();
-        $event->id=IdGenerator::generate(['table' => 'events', 'length' => 6, 'prefix' =>'EVE']);
-        $event->event_name=$request->eventName;
-        $event->event_date=$request->eventDate;
-        $event->event_time=$request->eventTime;
-        $event->details=$request->eventDetail;
+        $participation = new Participation();
+        $participation->id=IdGenerator::generate(['table' => 'participations', 'length' => 6, 'prefix' =>'PAR']);
+        $participation->event_id=$request->id;
+        $participation->username=$request->username;
+        $participation->save();
 
-        // ensure the request has a file before we attempt anything else.
-        if ($request->hasFile('file')) {
-
-            $request->validate([
-                'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
-            ]);
-
-            // Save the file locally in the storage/public/ folder under a new folder named /images
-            $request->file->store('eventpic', 'public');
-
-            // Store the record, using the new file hashname which will be it's new filename identity.
-            $event->file_path=$request->file->hashName();
-        }
-
-        $event->save(); // Finally, save the record.
-
-        return redirect('add-event');
+        return redirect('event');
     }
 
     /**
@@ -110,14 +90,5 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function getDetails($id)
-    {
-
-        $eventDetails= Event::find($id);
-
-        return view('event-info', ['eventDetails'=>$eventDetails]);
-
     }
 }

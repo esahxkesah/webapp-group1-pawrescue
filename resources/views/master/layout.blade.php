@@ -32,7 +32,7 @@
 				<div class="row">
 					<div class="col-md-6 d-flex align-items-center">
 						<p class="mb-0 phone pl-md-2">
-            
+
 							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
 							<a href="#"><span class="fa fa-paper-plane mr-1"></span> pawrescue@gmail.com</a>
 						</p>
@@ -50,36 +50,36 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav">
+                <li class="nav-item"><a href="mainpage" class="nav-link">Home</a></li>
+	            <li class="nav-item"><a href="adopt" class="nav-link">Adopt</a></li>
+          	    <li class="nav-item"><a href="add-report" class="nav-link">Report</a></li>
+	            <li class="nav-item"><a href="event" class="nav-link">Event</a></li>
+	        	<li class="nav-item"><a href="{{  route('profile.show') }}" :active="request()->routeIs('profile.show')" class="nav-link">Profile</a></li>
             @if (Route::has('login'))
-                <div
-                    @auth
-                    class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a></li>
-                 <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}" x-data>
-                    @csrf
 
-                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
-                                   @click.prevent="$root.submit();">
-                        {{ __('Log Out') }}
-                    </x-jet-responsive-nav-link>
-                </form>
+                    @auth
+                    {{-- <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a></li> --}}
+
+                    <!-- Authentication -->
+
+                    <form method="POST" action="{{ route('logout') }}" x-data>
+                        @csrf
+                    <li class="nav-item" style="margin-top: 35px">
+                        <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                    @click.prevent="$root.submit();">
+                            {{ __('Log Out') }}
+                        </x-jet-responsive-nav-link>
+                    </li>
+                    </form>
                     @else
-                    <li class="nav-item"><a href="{{ route('login') }}"class="nav-link">Log in</a></li>
-                    <ul class="navbar-nav">
+                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log in</a></li>
 
                         {{-- @if (Route::has('register'))
                         <li class="nav-item"><a href="{{ route('register') }}"class="nav-link">Register</a></li>
                         @endif --}}
                     @endauth
-                </div>
             @endif
 
-	        	<li class="nav-item active"><a href="homepage" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="adopt" class="nav-link">Adopt</a></li>
-          	<li class="nav-item"><a href="report" class="nav-link">Report</a></li>
-	          <li class="nav-item"><a href="event" class="nav-link">Event</a></li>
-	        	<li class="nav-item"><a href="{{  route('profile.show') }}" :active="request()->routeIs('profile.show')" class="nav-link">Profile</a></li>
-                <li class="nav-item dropdown">
 	        </ul>
 	      </div>
 	    </div>
@@ -93,34 +93,30 @@
 				<div class="row">
 					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
 						<h2 class="footer-heading">PawRescue</h2>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-						<ul class="ftco-footer-social p-0">
+						<p>Make animals happy</p>
+						{{-- <ul class="ftco-footer-social p-0">
               <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
               <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
               <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
-            </ul>
+            </ul> --}}
 					</div>
 					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
 						<h2 class="footer-heading">Latest News</h2>
 						<div class="block-21 mb-4 d-flex">
-              <a class="img mr-4 rounded" style="background-image: url(/images/image_1.jpg);"></a>
+              <a class="img mr-4 rounded" style="background-image: url(/images/island.jpg);"></a>
               <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                <h3 class="heading"><a href="#">Cat Islands you should visit!</a></h3>
                 <div class="meta">
-                  <div><a href="#"><span class="icon-calendar"></span> April 7, 2020</a></div>
-                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  <div><a href="#"><span class="icon-calendar"></span> April 9, 2023</a></div>
                 </div>
               </div>
             </div>
             <div class="block-21 mb-4 d-flex">
-              <a class="img mr-4 rounded" style="background-image: url(/images/image_2.jpg);"></a>
+              <a class="img mr-4 rounded" style="background-image: url(/images/pethealth.jpg);"></a>
               <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                <h3 class="heading"><a href="#">Check your pet's health every week</a></h3>
                 <div class="meta">
-                  <div><a href="#"><span class="icon-calendar"></span> April 7, 2020</a></div>
-                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  <div><a href="#"><span class="icon-calendar"></span> May 16, 2023</a></div>
                 </div>
               </div>
             </div>
@@ -128,9 +124,9 @@
 					<div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
 						<h2 class="footer-heading">Quick Links</h2>
 						<ul class="list-unstyled">
-                            <li><a href="homepage" class="py-2 d-block">Home</a></li>
+                            <li><a href="mainpage" class="py-2 d-block">Home</a></li>
                             <li><a href="adopt" class="py-2 d-block">Adopt</a></li>
-                            <li><a href="#" class="py-2 d-block">Report</a></li>
+                            <li><a href="add-report" class="py-2 d-block">Report</a></li>
                             <li><a href="event" class="py-2 d-block">Event</a></li>
                         </ul>
 					</div>

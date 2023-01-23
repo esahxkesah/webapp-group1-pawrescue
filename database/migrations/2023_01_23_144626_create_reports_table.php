@@ -13,17 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
-            $table->string('id', 6);
-            $table->string('event_name', 30);
-            $table->date('event_date'); //date format in form
-            $table->time('event_time', $precision = 0);
-            $table->string('details', 500);
-            $table->string('file_path');
+        Schema::create('reports', function (Blueprint $table) {
+            $table->string('id', 12);
+            $table->string('username', 30);
+            $table->string('report_title', 50);
+            $table->string('report_details');
             $table->timestamps();
         });
-    }
 
+    }
     /**
      * Reverse the migrations.
      *
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('reports');
     }
 };

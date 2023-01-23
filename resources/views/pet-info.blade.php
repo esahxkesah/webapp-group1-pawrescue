@@ -42,13 +42,15 @@
                         <div class="pet-title">
                             <h2>{{$petDetails->pet_name}}</h2>
                         </div>
-                        <div class="pet-date">
+                        <div class="pet-detail">
                             <h3>{{$petDetails->pet_type}}</h3>
+                            <h3>{{$petDetails->pet_breed}}</h3>
                             <h3>{{$petDetails->pet_age}}</h3>
                             <h3>{{$petDetails->pet_sex}}</h3>
                         </div>
                         <div class="event-btn-group">
-                            <button type="submit">Adoption</button>
+                            {{-- <button type="submit">Adoption</button> --}}
+                            <button class="button-class" type="submit" onclick="myFunction()" id="new-adopt">Adoption</button>
                         </div>
                     </div>
                 </div>
@@ -56,5 +58,14 @@
         </div>
   </body>
 </html>
+<script>
+    var form = document.getElementById('new-adopt');
 
+    function myFunction()
+    {
+          if(form.checkValidity()){
+            alert("You have adopted a pet!")
+          }
+    }
+        </script>
 @endsection
