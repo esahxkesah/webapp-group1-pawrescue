@@ -43,8 +43,8 @@ There will be 2 users for our website:
 | -------------                    | -------------      |
 | Profile                          |Profile section for members will be created using jetstream, where members can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
 | Homepage                         |The first page that visitors see when they load our URL. Members can only view all the information on the homepage, they cannot add or customize any articles, videos and etc.|
-| Adoption                         |Members can only view and fill in the adoption form on this page if they want to adopt a pet.|
-| Events                           |Members can only view and fill in the event form on this page if they want to participate in the event.|
+| Adoption                         |Members can only view and choose a pet to adopt on this page.|
+| Events                           |Members can only view and choose a event to participate on this page.|
 | Reports                          |Members can only view and fill in the report form on this page if they want to make a report.|
 
 ### Staff
@@ -53,7 +53,7 @@ There will be 2 users for our website:
 | Profile                          |Profile section for staff will be created using jetstream, where staff can create their own profile by fill in their informations such as name, phone number, email, address, and etc.|
 | Adoption                         |Staff can customize the adoption page by create, read, update, and delete any data on the adoption list.|
 | Events                           |Staff can customize the event page by create, read, update, and delete any data on the event list.|
-| Reports                          |Staff can customize the report page by create, read, update, and delete any data on the report list.|
+| Reports                          |Staff can customize the report page by read, update, and delete any data on the report list.|
 
 ## ERD Diagram & Relationship
 ![Entity Relationship Diagram ](https://user-images.githubusercontent.com/83501001/209619423-bd660844-5f9e-437d-8894-933ad1e96635.png)
@@ -85,6 +85,9 @@ There will be 2 users for our website:
 ## Project System Captured
 
 ## Challenges & Difficutlties 
+1) Trying to figure out out how to use github so that the work can be compiled.
+2) Separating the page for staff and members.
+3) 
 
 ## References
 
