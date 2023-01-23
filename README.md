@@ -95,6 +95,45 @@ There will be 3 type of users for our website:
 ![Sequence diagram - Copy of Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470671-96c464c9-0c59-4058-b3d8-8312bb94951a.png)
 
 ## Project System Captured
+### Login
+![Screenshot_20230124_033556](https://user-images.githubusercontent.com/83501001/214135722-b20adde0-d108-4514-9912-b18b8302bc68.png)
+
+### Homepage
+#### Guest
+![Screenshot_20230124_033112](https://user-images.githubusercontent.com/83501001/214133635-d3b1ad45-c32f-454c-a68d-860ae9008908.png)
+
+#### Logged in
+![Screenshot_20230124_033658](https://user-images.githubusercontent.com/83501001/214133746-9d0a386f-3848-4622-81a4-dcfa848d29a8.png)
+
+### Adopt
+#### View Adoption list
+![Screenshot_20230124_033325](https://user-images.githubusercontent.com/83501001/214133813-c2711f78-895a-4c5e-be85-8dc2c23e8724.png)
+![Screenshot_20230124_034220](https://user-images.githubusercontent.com/83501001/214134312-60fbfeb1-b420-461a-9e43-4a24c989d27e.png)
+
+#### Add Pet (as logged in admin)
+![Screenshot_20230124_034136](https://user-images.githubusercontent.com/83501001/214134198-db1d154a-13b8-48ff-84ff-81198469d7b6.png)
+
+### Report
+#### View Report list
+![image](https://user-images.githubusercontent.com/83501001/214134666-03578e11-909b-4010-b65e-60bfff40892a.png)
+
+#### Add report
+![Screenshot_20230124_033346](https://user-images.githubusercontent.com/83501001/214134425-7001ffaa-60f7-4c6f-875f-6e8607954392.png)
+
+### Event
+#### View Event list
+![Screenshot_20230124_033456](https://user-images.githubusercontent.com/83501001/214134964-7e430097-a714-47cb-bf0e-8aa3fb0e3fce.png)
+![image](https://user-images.githubusercontent.com/83501001/214135295-c2ab2388-482e-48d4-8a4b-9693c3c362b5.png)
+
+
+#### Add event
+![Screenshot_20230124_034649](https://user-images.githubusercontent.com/83501001/214135191-2d0a0f28-405e-400e-a675-1a275c262d42.png)
+
+### Donate
+![Screenshot_20230124_033544](https://user-images.githubusercontent.com/83501001/214135470-9c40a47b-2a55-4401-9a24-c79bfa514675.png)
+
+### Profile
+![Screenshot_20230124_033634](https://user-images.githubusercontent.com/83501001/214135632-b03c34dc-5aba-49dc-b7de-06d9c407e7b2.png)
 
 ## Challenges & Difficutlties 
 ### 1) Figuring out out how to use GitHub so that the work can be compiled.
