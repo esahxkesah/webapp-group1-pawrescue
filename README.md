@@ -89,10 +89,10 @@ There will be 3 type of users for our website:
 
 ## Sequence Diagram
 ### Member Role
-![Sequence diagram - Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470668-4966014a-c821-47fa-a266-4a8131fb9f9a.png)
+![Sequence diagram - Copy of Sequence diagram (2)](https://user-images.githubusercontent.com/68623558/214205954-e630a9ea-4c11-491b-889f-788bd49d6355.png)
 
 ### Staff Role
-![Sequence diagram - Copy of Copy of Sequence diagram (1)](https://user-images.githubusercontent.com/68623558/209470671-96c464c9-0c59-4058-b3d8-8312bb94951a.png)
+![Sequence diagram - Copy of Copy of Sequence diagram (2)](https://user-images.githubusercontent.com/68623558/214205965-255c7200-8abb-4234-af31-00f9fe80bdfa.png)
 
 ## Project System Captured
 ### Login
