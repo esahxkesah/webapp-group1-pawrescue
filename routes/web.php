@@ -21,30 +21,42 @@ use App\Http\Controllers\DonateController;
 |
 */
 
+//homepage
 Route::get('/', function () {
     return view('mainpage');
 });
 
+//homepage
 Route::get('/home', function () {
     return view('mainpage');
 });
 
+// DONATION
+Route::resource( 'donate',  DonateController::class);
+
+
+//EVENT
 //route to page of all events
 Route::get('/event', [EventController::class, 'index']);
 
 // //route for individual events
 Route::get('/event/{id?}', [EventController::class, 'getDetails'])-> name('event.details');
 
-//route to page of all pets for adoption
-Route::get('/adopt', [PetController::class, 'index']);
-
-//route for individual pets
-Route::get('/adopt/{id}', [PetController::class, 'getDetails'])-> name('pet.details');
+//route after clicking submit button to store the inputs
+Route::resource('addevent', EventController::class);
 
 //route to add event (ONLY FOR ADMINS)
 Route::get('/add-event', function () {
     return view('add-event');
 });
+
+
+//ADOPTION
+//route to page of all pets for adoption
+Route::get('/adopt', [PetController::class, 'index']);
+
+//route for individual pets
+Route::get('/adopt/{id}', [PetController::class, 'getDetails'])-> name('pet.details');
 
 //route to add pet for adoption (ONLY FOR ADMINS)
 Route::get('/add-pet', function () {
@@ -52,15 +64,9 @@ Route::get('/add-pet', function () {
 });
 
 //route after clicking submit button to store the inputs
-Route::resource('addevent', EventController::class);
 Route::resource('addpet', PetController::class);
 
-// //route to participate controller
-// Route::resource('/participate/{username}', ParticipateController::class)-> name('participate.action');
-
-//route after clicking submit button
-Route::resource('addevent', EventController::class);
-
+//REPORT
 //add report open to every members
 Route::get('/add-report',function(){
     return view('add-report');
@@ -68,9 +74,9 @@ Route::get('/add-report',function(){
 
 Route::resource('report', ReportController::class);
 
-// Donation Form
-Route::resource( 'donate',  DonateController::class);
 
+
+//AUTH
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
